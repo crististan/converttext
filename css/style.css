@@ -224,6 +224,15 @@ textarea {
 	background: #070707 !important;
 }
 
+.ads {
+	margin: 10px auto;
+	text-align: center;
+}
+
+.ad {
+	margin-top: 10px;
+}
+
 footer{
 	width: 100%;
 	height: auto;
