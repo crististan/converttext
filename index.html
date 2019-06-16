@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" content="ConvertText">
+	<meta name="description" content="Convert text now to upper case, lower case and capitalized case using ConvertText. Transform your string simple and easy.">
+	<meta name="keywords" content="convert, text, uppercase, lettercar, capitalizedcase">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta name="revisit-after" content="5 days">
+	<meta name="author" content="Cristi Stan">
+	<link rel="canonical" href="https://cristi-stan.ro/" />
+	<meta property="og:locale" content="en_EN" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="ConvertText" />
+	<meta property="og:description" content="Convert text now to upper case, lower case and capitalized case using ConvertText. Transform your string simple and easy." />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="ConvertText" />
+	<meta name="twitter:description" content="Convert text now to upper case, lower case and capitalized case using ConvertText. Transform your string simple and easy." />
+	<meta name="twitter:title" content="ConvertText" />
+	<title>ConvertText</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+                window.location.hash = hash;
+              });
+            }
+          });
+        });
+    </script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light" id="custom-style">
+		<a class="navbar-brand" href="/">ConvertText</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="https://cristi-stan.ro/despre/" target="_blank">About author <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://cristi-stan.ro/proiecte/" target="_blank">Projects</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<section id="showcase">
+		<div class="showcase-content">
+			<h1>Convert your text now to upper case, lower case, capitalized case</h1>
+		</div>
+		<div class="video-wrap">
+			<video src="video/bg.mov" autoplay="true" loop="true" muted="true"></video>
+		</div>
+		<div class="overlay"></div>
+		<a id="go" href="#convert"><i class="fas fa-sort-down"></i></a>
+	</section>
+	<section id="convert">
+		<div class="container">
+			<div class="main">
+				<div class="tab">
+					<div class="buttons-area">
+						<button class="tablinks tab-button" onclick="openTab(event, 'toUpperCase')" id="defaultOpen">Upper Case</button>
+						<button class="tablinks tab-button" onclick="openTab(event, 'toLowerCase')" id="defaultOpen">Lower Case</button>
+						<button class="tablinks tab-button" onclick="openTab(event, 'toCapCase')" id="defaultOpen">Capitalized Case</button>
+					</div>
+					<div id="toUpperCase" class="tabcontent">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group blue-border">
+									<textarea class="form-control" id="textarea-01"></textarea>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="show-conv-text">
+									<div class="form-group blue-border">
+										<textarea class="form-control" id="show-uppercase">Converted text here...</textarea>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<button class="btn" onclick="clearUpperCase()">Clear</button><button class="btn" onclick="copyUpperCase()">Copy</button>
+							</div>
+						</div>
+					</div>
+					<div id="toLowerCase" class="tabcontent">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group blue-border">
+									<textarea class="form-control" id="textarea-02"></textarea>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="show-conv-text">
+									<div class="form-group blue-border">
+										<textarea class="form-control" id="show-lowercase">Converted text here...</textarea>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<button class="btn" onclick="clearLowerCase()">Clear</button><button class="btn" onclick="copyLowerCase()">Copy</button>
+							</div>
+						</div>
+					</div>
+					<div id="toCapCase" class="tabcontent">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group blue-border">
+									<textarea class="form-control" id="textarea-03"></textarea>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="show-conv-text">
+									<div class="form-group blue-border">
+										<textarea class="form-control" id="show-capcase">Converted text here...</textarea>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<button class="btn" onclick="clearCapCase()">Clear</button><button class="btn" onclick="copyCapCase()">Copy</button>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="text">
+						<p>The free online tool <b>ConvertText</b> is allow you to convert string into upper case, lower case and capitalized case. Then you can copy the converted text and paste it back to your document.</p>
+						<h2>How it works?</h2>
+						<p>Using the <b>ConvertText</b> tool is very simple. Choose the desired format and paste or typing your text in the text field. Your string is automatically convert in your chosen format. Then, copy the converted text by clicking the "Copy" button and paste it in your document.</p>
+						<h2>In which cases can convert my text?</h2>
+						<p>You can convert your text in 3 different cases:</p>
+						<p><b>Upper Case</b></p>
+						<p>All the letters from your text are converted in capital letters</p>
+						<p><i>Example: THIS IS A UPPER CASE TEXT</i></p>
+						<p><b>Lower Case</b></p>
+						<p>All the letters from your text are converted in small letters</p>
+						<p><i>Example: this is a lower case text</i></p>
+						<p><b>Capitalized Case</b></p>
+						<p>The first letter of every word from your text is converted in capital letter</p>
+						<p><i>Example: This Is A Capitalized Case Text</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			Made by <a href="https://cristi-stan.ro" target="_blank">Cristi Stan</a>
+		</div>
+	</footer>
+</body>
+</html>
+
+<script>
+	function openTab(evt, cityName) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablinks");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].className = tablinks[i].className.replace(" active", "");
+	    }
+	    document.getElementById(cityName).style.display = "block";
+	    evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>
